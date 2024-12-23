@@ -1,0 +1,17 @@
+{
+    "name": "elijah/coding-challenge-full-stack",
+    "description": "Coding challenge full stack app",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Elijah\\PHP_Insights\\": "server/app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Elijah",
+            "email": "elijahbus.ny@gmail.com"
+        }
+    ],
+    "require": {}
+}
