@@ -35,11 +35,11 @@ class Application
     private function connectToDatabase()
     {
         $this->dbConnection = (new DatabaseConnection())
-            ->setUsername('root')
+            ->setUsername('user')
             ->setPassword('password')
             ->setHost('127.0.0.1')
             ->setPort(3306)
-            ->setDatabase('debug')
+            ->setDatabase('php_insights')
             ->connect();
     }
 

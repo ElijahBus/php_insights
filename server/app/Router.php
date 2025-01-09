@@ -51,7 +51,8 @@ class Router
                 $this->canExtractRequestBody($requestMethod) ? $this->routes[$route[0]][1]($requestBody) : $this->routes[$route[0]][1]
             ]);
         } else {
-            throw new Exception("No route handler for route /$uri[1] ");
+            echo "No route handler for route /$uri[1] ";
+            // throw new Exception("No route handler for route /$uri[1] ");
         }
     }
 

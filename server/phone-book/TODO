@@ -1,0 +1,7 @@
+Phone book
+
+- User A has seeded list of his contacts in the DB
+- User A wants to share his contacts list with User B via e-mail
+
+- Save user A contacts in the DB in a secured way ( encrypted )
+- User B should receive the shared contacts on e-mail in plain format

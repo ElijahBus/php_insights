@@ -1,0 +1,22 @@
+[
+  {
+    "email": "mark@somedumpserver.com",
+    "contacts": [
+      "sarah.wilson@somedumpserver.com",
+      "chris.moore@somedumpserver.com",
+      "amy.taylor@somedumpserver.com",
+      "ryan.anderson@somedumpserver.com",
+      "kate.thomas@somedumpserver.com"
+    ]
+  },
+  {
+    "email": "matt@somedumpserver.com",
+    "contacts": [
+      "john.doe@somedumpserver.com",
+      "jane.smith@somedumpserver.com",
+      "michael.brown@somedumpserver.com",
+      "emily.jones@somedumpserver.com",
+      "david.miller@somedumpserver.com"
+    ]
+  }
+]
