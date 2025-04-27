@@ -5,3 +5,7 @@ Phone book
 
 - Save user A contacts in the DB in a secured way ( encrypted )
 - User B should receive the shared contacts on e-mail in plain format
+
+Extra:
+ - Share the encrypted contact files with User B
+ - Decrypt the contacts when the user want to import the file

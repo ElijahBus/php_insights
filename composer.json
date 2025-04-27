@@ -16,6 +16,6 @@
     "require": {
       "ext-json": "*",
       "ext-pdo": "*",
-      "ext-libsodium": "*"
+      "ext-sodium": "*"
     }
 }

@@ -4,8 +4,6 @@ namespace server\phone_book;
 
 use PDO;
 
-use Sodium;
-
 class Service
 {
 
@@ -17,6 +15,19 @@ class Service
 
     public function shareContacts($sharingUser)
     {
+        $message = "This is a secret message.";
+
+        // Generate a random key
+        $key = sodium_crypto_secretbox_keygen();
+
+        // Generate a random nonce (must be unique for each encryption)
+        $nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+
+        // Encrypt the message
+        $ciphertext = sodium_crypto_secretbox($message, $nonce, $key);
+
+        dd("Elijah");
+
         $contactsQuery = "SELECT contacts FROM phone_book WHERE email = :sharingUser";
 
         try {

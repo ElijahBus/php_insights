@@ -12,6 +12,7 @@ require_once '../server/routes.php';
 require_once '../server/app/Controller.php';
 require_once '../server/app/Router.php';
 require_once '../server/phone-book/Service.php';
+require_once '../server/utils.php';
 
 $app = Application::init();
 
