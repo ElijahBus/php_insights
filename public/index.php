@@ -1,24 +1,33 @@
 <?php
 
-global $routes;
+include_once __DIR__ . '/../vendor/autoload.php';
 
-use server\app\Application;
-use server\app\Router;
+use OpenSwoole\Http\Request;
+use OpenSwoole\Http\Response;
+use OpenSwoole\Http\Server;
 
-require_once '../vendor/autoload.php';
+$server = new Server('0.0.0.0', 8002);
 
-require_once '../server/app/Application.php';
-require_once '../server/routes.php';
-require_once '../server/app/Controller.php';
-require_once '../server/app/Router.php';
+$clientVersion = "0.0.1";
 
+$server->on('Start', function (Server $server) {
+	echo "Server is started at http://{$server->host}:{$server->port}\n";
+});
 
-$app = Application::init();
+$server->on('request', function (Request $request, Response $response) use (&$clientVersion) {
+	$params = [];
 
-$db = $app->getDbConnection();
+	if (isset($request->server['query_string'])) {
+		parse_str($request->server['query_string'], $params);
+	}
 
-(new Router($routes, $db))->resolve();
+	if (isset($params['client_version'])) {
+		$clientVersion  = $params['client_version'];
+	}
 
+	array_push($params, $clientVersion);
 
-// Start the server : php -S 127.0.0.1:8000 -t public
-// Start the client : cd client && npm run dev
+    $response->end(json_encode($params));
+});
+
+$server->start();

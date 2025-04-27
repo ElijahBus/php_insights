@@ -1,6 +1,6 @@
 {
-    "name": "elijah/coding-challenge-full-stack",
-    "description": "Coding challenge full stack app",
+    "name": "elijah/php-insights",
+    "description": "PHP Insights",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -13,5 +13,10 @@
             "email": "elijahbus.ny@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "openswoole/core": "^22.2"
+    },
+    "require-dev": {
+        "openswoole/ide-helper": "~22.0.1"
+    }
 }
